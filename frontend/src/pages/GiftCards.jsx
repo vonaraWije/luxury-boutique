@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FiGift, FiCheck, FiArrowRight, FiMail } from 'react-icons/fi';
 import { RiVipCrownLine } from 'react-icons/ri';
 import toast from 'react-hot-toast';
+import api from '../utils/api';
 
 const amounts = [100, 250, 500, 1000, 2500, 5000];
 
@@ -20,14 +21,31 @@ export default function GiftCards() {
 
   const finalAmount = custom ? Number(custom) : selected;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (finalAmount < 50) { toast.error('Minimum gift card value is $50.'); return; }
     setLoading(true);
-    setTimeout(() => {
-      toast.success(`Gift card for $${finalAmount} sent to ${form.recipientEmail}!`);
+    try {
+      const { data } = await api.post('/gift-cards', {
+        recipientName: form.recipientName,
+        recipientEmail: form.recipientEmail,
+        senderName: form.senderName,
+        message: form.message,
+        amount: finalAmount,
+      });
+      if (data.emailSent) {
+        toast.success(`Gift card for $${finalAmount} sent to ${form.recipientEmail}!`);
+      } else {
+        toast.success(`Gift card created! (Code: ${data.code}) — email delivery failed, please contact support.`);
+      }
+      setForm({ recipientName: '', recipientEmail: '', senderName: '', message: '' });
+      setCustom('');
+      setSelected(250);
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Something went wrong. Please try again.');
+    } finally {
       setLoading(false);
-    }, 1400);
+    }
   };
 
   return (

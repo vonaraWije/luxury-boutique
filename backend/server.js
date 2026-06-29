@@ -19,6 +19,7 @@ app.use('/api/products', require('./routes/products'));
 app.use('/api/orders', require('./routes/orders'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/reviews', require('./routes/reviews'));
+app.use('/api/gift-cards', require('./routes/giftCards'));
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'Luxury Boutique API running' }));
