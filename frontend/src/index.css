@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    @apply bg-cream text-charcoal font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2
+           bg-gold-gradient text-white font-body font-semibold
+           px-8 py-3 tracking-widest uppercase text-xs
+           transition-all duration-300 hover:opacity-90 hover:scale-105
+           shadow-lg shadow-gold-500/30;
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2
+           border border-gold-500 text-gold-600 font-body font-semibold
+           px-8 py-3 tracking-widest uppercase text-xs
+           transition-all duration-300 hover:bg-gold-500 hover:text-white;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2
+           bg-charcoal text-white font-body font-semibold
+           px-8 py-3 tracking-widest uppercase text-xs
+           transition-all duration-300 hover:bg-black hover:scale-105;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal text-center;
+  }
+
+  .section-subtitle {
+    @apply font-body text-sm tracking-widest uppercase text-gold-500 text-center mb-3;
+  }
+
+  .gold-divider {
+    @apply w-16 h-px bg-gold-gradient mx-auto my-4;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .input-luxury {
+    @apply w-full border border-gray-200 bg-white px-4 py-3 text-sm text-charcoal
+           focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500
+           transition-colors duration-200 placeholder-gray-400;
+  }
+
+  .badge-gold {
+    @apply inline-block bg-gold-gradient text-white text-xs font-bold px-2 py-0.5 tracking-wider uppercase;
+  }
+
+  .badge-dark {
+    @apply inline-block bg-charcoal text-white text-xs font-bold px-2 py-0.5 tracking-wider uppercase;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c9a96e; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b8924a; }
+
+/* Page transitions */
+.page-enter { animation: fadeIn 0.4s ease-in-out; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Swiper custom */
+.swiper-pagination-bullet-active { background: #c9a96e !important; }
+.swiper-button-next::after,
+.swiper-button-prev::after { color: #c9a96e !important; font-size: 18px !important; }
