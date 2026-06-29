@@ -10,6 +10,12 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 import Profile from './pages/Profile';
+import Contact from './pages/Contact';
+import ShippingReturns from './pages/ShippingReturns';
+import SizeGuide from './pages/SizeGuide';
+import FAQs from './pages/FAQs';
+import TrackOrder from './pages/TrackOrder';
+import GiftCards from './pages/GiftCards';
 import { useAuth } from './context/AuthContext';
 
 function ProtectedRoute({ children }) {
@@ -31,9 +37,15 @@ export default function App() {
         <Route path="/login"       element={<Login />} />
         <Route path="/register"    element={<Register />} />
         <Route path="/checkout"    element={<Checkout />} />
-        <Route path="/profile"     element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-        <Route path="/orders"      element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-        <Route path="*"            element={<Navigate to="/" replace />} />
+        <Route path="/profile"           element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path="/orders"            element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path="/contact"           element={<Contact />} />
+        <Route path="/shipping-returns"  element={<ShippingReturns />} />
+        <Route path="/size-guide"        element={<SizeGuide />} />
+        <Route path="/faqs"              element={<FAQs />} />
+        <Route path="/track-order"       element={<TrackOrder />} />
+        <Route path="/gift-cards"        element={<GiftCards />} />
+        <Route path="*"                  element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </>

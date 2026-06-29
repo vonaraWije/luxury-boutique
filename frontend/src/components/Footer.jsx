@@ -65,9 +65,16 @@ export default function Footer() {
         <div>
           <h4 className="text-xs tracking-widest uppercase font-body text-cream mb-5">Customer Care</h4>
           <ul className="space-y-3">
-            {['Contact Us','Shipping & Returns','Size Guide','FAQs','Track Order','Gift Cards'].map((item) => (
-              <li key={item}>
-                <a href="#" className="text-sm font-body text-cream/60 hover:text-gold-400 transition-colors duration-200">{item}</a>
+            {[
+              { label: 'Contact Us',        to: '/contact' },
+              { label: 'Shipping & Returns',to: '/shipping-returns' },
+              { label: 'Size Guide',        to: '/size-guide' },
+              { label: 'FAQs',              to: '/faqs' },
+              { label: 'Track Order',       to: '/track-order' },
+              { label: 'Gift Cards',        to: '/gift-cards' },
+            ].map(({ label, to }) => (
+              <li key={label}>
+                <Link to={to} className="text-sm font-body text-cream/60 hover:text-gold-400 transition-colors duration-200">{label}</Link>
               </li>
             ))}
           </ul>
