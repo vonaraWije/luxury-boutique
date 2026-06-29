@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
-import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
+import { FiInstagram, FiTwitter, FiFacebook, FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
+import { BsPinterest, BsYoutube } from 'react-icons/bs';
 
 export default function Footer() {
+  const socials = [
+    { Icon: FiInstagram, label: 'Instagram' },
+    { Icon: FiTwitter,   label: 'Twitter' },
+    { Icon: FiFacebook,  label: 'Facebook' },
+    { Icon: BsPinterest, label: 'Pinterest' },
+    { Icon: BsYoutube,   label: 'YouTube' },
+  ];
+
   return (
     <footer className="bg-charcoal text-cream/70">
       {/* Top section */}
@@ -13,10 +22,23 @@ export default function Footer() {
           <p className="text-sm font-body leading-relaxed text-cream/60">
             Curating the finest in clothing, jewellery and cosmetics for the discerning individual since 2010.
           </p>
-          <div className="flex gap-4 mt-6">
-            {[FiInstagram, FiTwitter, FiFacebook].map((Icon, i) => (
-              <a key={i} href="#" className="w-9 h-9 border border-white/20 flex items-center justify-center text-cream/60 hover:border-gold-500 hover:text-gold-500 transition-colors duration-200">
-                <Icon size={14} />
+          {/* Contact info */}
+          <div className="mt-5 space-y-2">
+            {[
+              { Icon: FiMapPin, text: '12 Rue du Faubourg, Paris' },
+              { Icon: FiPhone,  text: '+1 (800) 555-0192' },
+              { Icon: FiMail,   text: 'hello@lumiere.com' },
+            ].map(({ Icon, text }) => (
+              <div key={text} className="flex items-center gap-2 text-xs text-cream/50 font-body">
+                <Icon size={12} className="text-gold-500 flex-shrink-0" />
+                {text}
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-3 mt-6 flex-wrap">
+            {socials.map(({ Icon, label }) => (
+              <a key={label} href="#" aria-label={label} className="w-9 h-9 border border-white/20 flex items-center justify-center text-cream/60 hover:border-gold-500 hover:text-gold-500 transition-colors duration-200">
+                <Icon size={13} />
               </a>
             ))}
           </div>

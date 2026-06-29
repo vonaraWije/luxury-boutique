@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiHeart, FiShoppingBag, FiStar } from 'react-icons/fi';
+import { FiHeart, FiShoppingBag, FiStar, FiEye } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
 
 export default function ProductCard({ product }) {
@@ -33,13 +33,21 @@ export default function ProductCard({ product }) {
           {discount              && <span className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 tracking-wider uppercase">-{discount}%</span>}
         </div>
 
-        {/* Wishlist */}
-        <button
-          onClick={(e) => { e.preventDefault(); setWishlisted(!wishlisted); }}
-          className="absolute top-3 right-3 w-8 h-8 bg-white/90 flex items-center justify-center hover:bg-white transition-all duration-200 shadow-sm"
-        >
-          <FiHeart size={14} className={wishlisted ? 'fill-red-500 text-red-500' : 'text-charcoal'} />
-        </button>
+        {/* Action buttons – right side */}
+        <div className="absolute top-3 right-3 flex flex-col gap-1.5">
+          <button
+            onClick={(e) => { e.preventDefault(); setWishlisted(!wishlisted); }}
+            className="w-8 h-8 bg-white/90 flex items-center justify-center hover:bg-white transition-all duration-200 shadow-sm"
+          >
+            <FiHeart size={14} className={wishlisted ? 'fill-red-500 text-red-500' : 'text-charcoal'} />
+          </button>
+          <Link
+            to={`/products/${product._id}`}
+            className="w-8 h-8 bg-white/90 flex items-center justify-center hover:bg-white transition-all duration-200 shadow-sm opacity-0 group-hover:opacity-100"
+          >
+            <FiEye size={14} className="text-charcoal" />
+          </Link>
+        </div>
 
         {/* Quick add - slides up on hover */}
         <div className={`absolute bottom-0 left-0 right-0 bg-charcoal/95 py-3 px-4 flex items-center justify-between transition-all duration-300 ${hovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>

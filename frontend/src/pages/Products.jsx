@@ -84,14 +84,23 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-cream page-enter">
       {/* Header */}
-      <div className="bg-charcoal py-14 px-6 text-center">
-        <p className="text-xs tracking-[0.4em] uppercase text-gold-400 font-body mb-3">
-          {category ? category.charAt(0).toUpperCase() + category.slice(1) : 'All Products'}
-        </p>
-        <h1 className="font-serif text-4xl md:text-5xl text-white">
-          {keyword ? `Results for "${keyword}"` : category ? `${category.charAt(0).toUpperCase() + category.slice(1)}` : 'Our Collections'}
-        </h1>
-        {total > 0 && <p className="text-white/40 text-sm font-body mt-3">{total} pieces</p>}
+      <div className="relative py-20 px-6 text-center overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=80"
+          alt="Collections"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          style={{ filter: 'brightness(0.25)' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="relative z-10">
+          <p className="text-xs tracking-[0.4em] uppercase text-gold-400 font-body mb-3">
+            {category ? category.charAt(0).toUpperCase() + category.slice(1) : 'All Products'}
+          </p>
+          <h1 className="font-serif text-4xl md:text-5xl text-white">
+            {keyword ? `Results for "${keyword}"` : category ? `${category.charAt(0).toUpperCase() + category.slice(1)}` : 'Our Collections'}
+          </h1>
+          {total > 0 && <p className="text-white/40 text-sm font-body mt-3">{total} pieces</p>}
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-8">
