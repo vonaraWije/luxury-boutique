@@ -7,7 +7,7 @@ const faqs = [
     category: 'Orders & Payment',
     items: [
       { q: 'What payment methods do you accept?', a: 'We accept all major credit and debit cards (Visa, Mastercard, Amex), PayPal, Apple Pay, Google Pay, and bank transfer for orders over $5,000. All transactions are secured with SSL encryption.' },
-      { q: 'Can I modify or cancel my order after placing it?', a: 'Orders can be modified or cancelled within 2 hours of placement. After this window, our fulfilment team begins processing. Please contact us immediately at hello@lumiere.com if you need to make changes.' },
+      { q: 'Can I modify or cancel my order after placing it?', a: 'Orders can be modified or cancelled within 2 hours of placement. After this window, our fulfilment team begins processing. Please contact us immediately at hello@lumiere.lk if you need to make changes.' },
       { q: 'Will I receive an order confirmation?', a: 'Yes — a confirmation email is sent immediately after your order is placed, followed by a shipping notification with your tracking number once dispatched.' },
       { q: 'Do you offer instalment payments?', a: 'Yes. We partner with Klarna and Afterpay to offer flexible 3 or 6-month instalment plans on orders over $200. Select your preferred option at checkout.' },
     ],

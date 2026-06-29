@@ -20,14 +20,14 @@ export default function Footer() {
           <h3 className="font-serif text-3xl text-cream tracking-widest uppercase mb-2">Lumière</h3>
           <p className="text-[9px] tracking-[0.4em] text-gold-500 uppercase mb-5 font-body">Luxury Boutique</p>
           <p className="text-sm font-body leading-relaxed text-cream/60">
-            Curating the finest in clothing, jewellery and cosmetics for the discerning individual since 2010.
+            Curating the finest in clothing, jewellery and cosmetics for the discerning individual. Proudly based in Colombo, Sri Lanka.
           </p>
           {/* Contact info */}
           <div className="mt-5 space-y-2">
             {[
-              { Icon: FiMapPin, text: '12 Rue du Faubourg, Paris' },
-              { Icon: FiPhone,  text: '+1 (800) 555-0192' },
-              { Icon: FiMail,   text: 'hello@lumiere.com' },
+              { Icon: FiMapPin, text: '42 Galle Road, Colombo 03, Sri Lanka' },
+              { Icon: FiPhone,  text: '+94 11 234 5678' },
+              { Icon: FiMail,   text: 'hello@lumiere.lk' },
             ].map(({ Icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-xs text-cream/50 font-body">
                 <Icon size={12} className="text-gold-500 flex-shrink-0" />

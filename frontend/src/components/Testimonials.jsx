@@ -2,22 +2,22 @@ import { FiStar } from 'react-icons/fi';
 
 const reviews = [
   {
-    name: 'Sophia L.',
-    role: 'Fashion Editor, Vogue',
+    name: 'Kavya Perera',
+    role: 'Fashion Blogger, Colombo',
     text: 'Lumière curates only the most extraordinary pieces. My silk evening gown arrived beautifully packaged and fits like it was made for me.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80',
   },
   {
-    name: 'Isabelle D.',
-    role: 'Interior Designer, London',
+    name: 'Dilani Fernando',
+    role: 'Interior Designer, Colombo',
     text: 'The diamond necklace I purchased exceeded every expectation. The craftsmanship is extraordinary and the service impeccable.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&q=80',
   },
   {
-    name: 'Elena M.',
-    role: 'CEO, Maison Group',
+    name: 'Sachini de Silva',
+    role: 'CEO, Lotus Holdings, Sri Lanka',
     text: 'Their caviar skin serum has become an essential part of my daily ritual. My skin has never looked more radiant. Absolutely divine.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&q=80',

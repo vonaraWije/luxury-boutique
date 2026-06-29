@@ -7,17 +7,17 @@ const info = [
   {
     Icon: FiMapPin,
     title: 'Visit Our Boutique',
-    lines: ['12 Rue du Faubourg Saint-Honoré', 'Paris, 75008, France'],
+    lines: ['42 Galle Road, Colombo 03', 'Sri Lanka'],
   },
   {
     Icon: FiPhone,
     title: 'Call Us',
-    lines: ['+1 (800) 555-0192', 'Mon – Sat, 9 am – 7 pm CET'],
+    lines: ['+94 11 234 5678', 'Mon – Sat, 9 am – 7 pm IST'],
   },
   {
     Icon: FiMail,
     title: 'Email Us',
-    lines: ['hello@lumiere.com', 'We reply within 24 hours'],
+    lines: ['hello@lumiere.lk', 'We reply within 24 hours'],
   },
   {
     Icon: FiClock,
@@ -173,16 +173,16 @@ export default function Contact() {
       {/* Map placeholder */}
       <div className="relative h-72 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80"
-          alt="Paris"
+          src="https://images.unsplash.com/photo-1588492069484-e7c95ef86a6e?w=1600&q=80"
+          alt="Colombo"
           className="w-full h-full object-cover"
           style={{ filter: 'brightness(0.6) saturate(0.8)' }}
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-white/10 backdrop-blur-sm border border-white/30 px-8 py-5 text-center">
             <FiMapPin size={20} className="text-gold-400 mx-auto mb-2" />
-            <p className="font-serif text-lg text-white">12 Rue du Faubourg Saint-Honoré</p>
-            <p className="text-xs tracking-widest uppercase text-gold-300 font-body mt-1">Paris, France</p>
+            <p className="font-serif text-lg text-white">42 Galle Road, Colombo 03</p>
+            <p className="text-xs tracking-widest uppercase text-gold-300 font-body mt-1">Sri Lanka</p>
           </div>
         </div>
       </div>

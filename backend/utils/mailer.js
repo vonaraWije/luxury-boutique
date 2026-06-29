@@ -116,7 +116,7 @@ async function sendGiftCardEmail({ recipientName, recipientEmail, senderName, me
         <tr>
           <td style="background:#1a1a1a;padding:24px 40px;text-align:center;">
             <p style="margin:0;font-size:10px;color:#666;font-family:Arial,sans-serif;">
-              © ${new Date().getFullYear()} Lumière Luxury Boutique · 12 Rue du Faubourg Saint-Honoré, Paris
+              © ${new Date().getFullYear()} Lumière Luxury Boutique · 42 Galle Road, Colombo 03, Sri Lanka
             </p>
             <p style="margin:8px 0 0;font-size:10px;color:#555;font-family:Arial,sans-serif;">
               Questions? <a href="mailto:hello@lumiere.com" style="color:#c9a96e;text-decoration:none;">hello@lumiere.com</a>

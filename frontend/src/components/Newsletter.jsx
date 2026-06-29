@@ -29,9 +29,9 @@ export default function Newsletter() {
         <div className="absolute inset-0 flex flex-col justify-end p-14">
           <div className="border-l-2 border-gold-500/60 pl-6">
             <p className="font-serif text-2xl text-white leading-relaxed mb-4">
-              "Luxury is the ease of a t-shirt<br />in a very expensive dress."
+              "Style is a way to say who you are<br />without having to speak."
             </p>
-            <p className="text-xs tracking-[0.4em] uppercase text-gold-300 font-body">— Karl Lagerfeld</p>
+            <p className="text-xs tracking-[0.4em] uppercase text-gold-300 font-body">— Rachel Zoe</p>
           </div>
         </div>
       </div>
